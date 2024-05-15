@@ -28,10 +28,12 @@
     "react-bootstrap": "^2.7.4",
     "sequelize": "^6.31.1",
     "sequelize-cli": "^6.6.1",
+    "socket.io": "^4.7.5",
     "swagger-jsdoc": "^6.2.8",
     "swagger-themes": "^1.4.3",
     "swagger-ui-express": "^5.0.0",
     "uuid": "^9.0.1",
+    "ws": "^8.17.0",
     "xhr2": "^0.2.1"
   },
   "devDependencies": {
