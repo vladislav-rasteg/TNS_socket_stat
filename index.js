@@ -21,10 +21,18 @@ const io = new Server(server, {
 })
 
 setInterval(() => {
-    axios.get(process.env.API_URL+"/stat/latest")
+    try{
+        axios.get(process.env.API_URL+"/stat/latest")
         .then(data => {
             io.emit("recieve_message", data.data);
         })
+        .catch(e => {
+            console.log(e)
+        })
+    } catch (e) {
+        console.log(e)
+    }
+    
 }, 1000);
 
 io.on('connection', (socket) => {
