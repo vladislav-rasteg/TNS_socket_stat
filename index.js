@@ -13,7 +13,12 @@ app.use(express.json())
 
 const server = require('http').createServer(app);
 
-const io = new Server(server)
+const io = new Server(server, {
+    cors: {
+        origin: "https://premarket.trustname.org/",
+        methods: ["GET", "POST"] 
+    }
+})
 
 setInterval(() => {
     try{
