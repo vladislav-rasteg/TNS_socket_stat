@@ -15,7 +15,7 @@ const server = require('http').createServer(app);
 
 const io = new Server(server, {
     cors: {
-        origin: "https://premarket.trustname.org",
+        origin: "*",
         methods: ["GET", "POST"] 
     }
 })
@@ -37,6 +37,10 @@ setInterval(() => {
 
 io.on('connection', (socket) => {
     console.log('A new client connected')
+
+    socket.on('error', (error) => {
+        console.log(`Socket error: ${error}`);
+    });
 })
 
 app.get('/', (req, res) => res.send('Hello world!'));
