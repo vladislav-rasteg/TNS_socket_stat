@@ -18,7 +18,7 @@ const io = new Server(server, {
         origin: "*",
         methods: ["GET", "POST"] 
     },
-    transports: ["websocket"]
+    transports: ["websocket", "poling"]
 })
 
 setInterval(() => {
