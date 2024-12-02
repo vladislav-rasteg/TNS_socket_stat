@@ -15,7 +15,7 @@ const server = require('http').createServer(app);
 
 const io = new Server(server, {
     cors: {
-        origin: "https://premarket.trustname.org",
+        origin: "*",
         methods: ["GET", "POST"] 
     }
 })
